@@ -9,7 +9,7 @@
 //
 // Load order requirement (must already be in place before this file runs):
 //   1. Bootstrap CSS (provides .btn, .btn-primary, etc.)
-//   2. @your-org/design-tokens/css  (provides --color-* etc. on :root)
+//   2. @your-org/core/css  (provides --color-* etc. on :root)
 //   3. This lib's _component-tokens.scss  (provides --button-* on :root)
 //   4. This file  (wires --button-* into Bootstrap's --bs-btn-*)
 //

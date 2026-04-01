@@ -3,7 +3,7 @@
 // =============================================================================
 //
 // All CSS layers are injected before this file via the angular.json styles array:
-//   1. @your-org/design-tokens       → --color-*, --spacing-*, etc.
+//   1. @your-org/core       → --color-*, --spacing-*, etc.
 //   2. @your-org/angular-button/css  → --button-* component token defaults
 //   3. bootstrap                     → .btn, .btn-primary (declares --bs-btn-*)
 //   4. @your-org/bootstrap-lib/css   → --bs-btn-* ← --button-* (must follow Bootstrap)

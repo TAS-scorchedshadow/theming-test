@@ -7,7 +7,7 @@
 // by the token system.
 //
 // Required load order in the consuming app:
-//   1. @your-org/design-tokens/css       → --color-*, --spacing-*, etc.
+//   1. @your-org/core/css       → --color-*, --spacing-*, etc.
 //   2. @your-org/angular-button/styles   → --button-* component token defaults
 //   3. Bootstrap CSS                     → .btn, .btn-primary, etc.
 //   4. @your-org/bootstrap-lib/styles    → this file (remaps --bs-btn-*)

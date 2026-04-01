@@ -3,7 +3,7 @@
   "name": "bootstrap-lib",
   "projectType": "library",
   "sourceRoot": "packages/component-libs/bootstrap-lib/src",
-  "implicitDependencies": ["design-tokens"],
+  "implicitDependencies": ["core"],
   "targets": {
     "build": {
       "executor": "nx:run-commands",

@@ -3,11 +3,11 @@
 // =============================================================================
 //
 // Defines all --button-* token defaults, pointing to semantic aliases from
-// @your-org/design-tokens. A deployment skin can override any of these on
+// @your-org/core. A deployment skin can override any of these on
 // :root without touching component SCSS.
 //
 // Load order (consuming app must respect this):
-//   1. @your-org/design-tokens/css     → --color-*, --spacing-*, etc. on :root
+//   1. @your-org/core/css     → --color-*, --spacing-*, etc. on :root
 //   2. @your-org/angular-button/styles → this file (--button-* defaults)
 //   3. [client]-skin.css               → deployment overrides
 // =============================================================================

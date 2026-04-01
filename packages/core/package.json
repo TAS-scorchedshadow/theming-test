@@ -1,5 +1,5 @@
 {
-  "name": "@your-org/design-tokens",
+  "name": "@your-org/core",
   "version": "1.0.0",
   "type": "module",
   "exports": {

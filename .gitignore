@@ -6,7 +6,7 @@ node_modules/
 .nx/workspace-data
 
 # Generated CSS outputs
-packages/design-tokens/dist/
+packages/core/dist/
 packages/component-libs/*/dist/
 
 .angular/

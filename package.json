@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "nx run-many --target=build --all",
-    "build:tokens": "nx run design-tokens:build",
+    "build:tokens": "nx run core:build",
     "affected:build": "nx affected --target=build",
     "demo": "npx ng serve demo"
   },

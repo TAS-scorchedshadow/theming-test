@@ -18,7 +18,7 @@
             "polyfills": ["zone.js"],
             "tsConfig": "apps/demo/tsconfig.app.json",
             "styles": [
-              "node_modules/@your-org/design-tokens/dist/css/tokens.css",
+              "node_modules/@your-org/core/dist/css/tokens.css",
               "node_modules/@your-org/angular-button/dist/component-tokens.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@your-org/bootstrap-lib/dist/bootstrap-overrides.css",
@@ -27,7 +27,7 @@
             "assets": [
               {
                 "glob": "*/skin.css",
-                "input": "node_modules/@your-org/design-tokens/skins",
+                "input": "node_modules/@your-org/core/skins",
                 "output": "assets/skins"
               }
             ],

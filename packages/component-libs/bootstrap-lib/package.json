@@ -6,7 +6,7 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@your-org/design-tokens": "^1.0.0"
+    "@your-org/core": "^1.0.0"
   },
   "exports": {
     "./styles": "./src/index.scss",
