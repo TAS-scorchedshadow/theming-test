@@ -1,0 +1,22 @@
+{
+  "name": "@your-org/angular-button",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "sass src/styles/_component-tokens.scss dist/component-tokens.css --no-source-map",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=20.0.0",
+    "@your-org/design-tokens": "^1.0.0"
+  },
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./styles": "./src/index.scss",
+    "./css": "./dist/component-tokens.css"
+  },
+  "files": [
+    "src",
+    "dist"
+  ]
+}

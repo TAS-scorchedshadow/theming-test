@@ -1,0 +1,22 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "bootstrap-lib",
+  "projectType": "library",
+  "sourceRoot": "packages/component-libs/bootstrap-lib/src",
+  "implicitDependencies": ["design-tokens"],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run build",
+        "cwd": "packages/component-libs/bootstrap-lib"
+      },
+      "inputs": [
+        "{projectRoot}/src/styles/_bootstrap-overrides.scss"
+      ],
+      "outputs": [
+        "{projectRoot}/dist/bootstrap-overrides.css"
+      ]
+    }
+  }
+}

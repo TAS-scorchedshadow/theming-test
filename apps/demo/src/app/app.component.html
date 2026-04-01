@@ -1,0 +1,75 @@
+<div class="demo-page">
+
+  <header class="demo-header">
+    <div class="demo-header__text">
+      <h1>Style Library Demo</h1>
+      <p>Both sections share the same <code>--button-*</code> tokens. Switching skin overrides primitives on <code>:root</code> — both libs update instantly.</p>
+    </div>
+
+    <div class="demo-skin-switcher">
+      <span class="demo-skin-switcher__label">Skin</span>
+      @for (skin of skins; track skin.id) {
+        <button
+          class="demo-skin-switcher__option"
+          [class.is-active]="skinService.activeSkin().id === skin.id"
+          (click)="skinService.apply(skin)"
+        >{{ skin.label }}</button>
+      }
+    </div>
+  </header>
+
+  <!-- Bootstrap lib -->
+  <section class="demo-section">
+    <p class="demo-section__label">bootstrap-lib</p>
+    <h2 class="demo-section__title">Bootstrap buttons — token-themed</h2>
+    <p class="demo-section__description">
+      Bootstrap's own classes with <code>--bs-btn-*</code> remapped to <code>--button-*</code> tokens.
+    </p>
+
+    <div class="demo-row">
+      <span class="demo-row__label">Default</span>
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-outline-primary">Ghost</button>
+    </div>
+    <div class="demo-row">
+      <span class="demo-row__label">Sizes</span>
+      <button class="btn btn-primary btn-sm">Small</button>
+      <button class="btn btn-primary">Medium</button>
+      <button class="btn btn-primary btn-lg">Large</button>
+    </div>
+    <div class="demo-row">
+      <span class="demo-row__label">Disabled</span>
+      <button class="btn btn-primary" disabled>Primary</button>
+      <button class="btn btn-outline-primary" disabled>Ghost</button>
+    </div>
+  </section>
+
+  <hr class="demo-divider">
+
+  <!-- Angular button lib -->
+  <section class="demo-section">
+    <p class="demo-section__label">angular-button</p>
+    <h2 class="demo-section__title">Angular button component — reimplemented</h2>
+    <p class="demo-section__description">
+      Standalone Angular component. No Bootstrap dependency. Same <code>--button-*</code> tokens, independent implementation.
+    </p>
+
+    <div class="demo-row">
+      <span class="demo-row__label">Default</span>
+      <button libButton variant="primary">Primary</button>
+      <button libButton variant="ghost">Ghost</button>
+    </div>
+    <div class="demo-row">
+      <span class="demo-row__label">Sizes</span>
+      <button libButton variant="primary" size="sm">Small</button>
+      <button libButton variant="primary" size="md">Medium</button>
+      <button libButton variant="primary" size="lg">Large</button>
+    </div>
+    <div class="demo-row">
+      <span class="demo-row__label">Disabled</span>
+      <button libButton variant="primary" disabled>Primary</button>
+      <button libButton variant="ghost" disabled>Ghost</button>
+    </div>
+  </section>
+
+</div>

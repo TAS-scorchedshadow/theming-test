@@ -1,0 +1,104 @@
+// =============================================================================
+// Bootstrap 5 CSS var overrides
+// =============================================================================
+//
+// Bootstrap 5.2+ exposes --bs-btn-* CSS custom properties on .btn and variant
+// classes. This file maps our --button-* component tokens into those vars so
+// that Bootstrap's own .btn-primary / .btn-outline-primary classes are themed
+// by our token system — no SCSS compilation-order tricks needed.
+//
+// Load order requirement (must already be in place before this file runs):
+//   1. Bootstrap CSS (provides .btn, .btn-primary, etc.)
+//   2. @your-org/design-tokens/css  (provides --color-* etc. on :root)
+//   3. This lib's _component-tokens.scss  (provides --button-* on :root)
+//   4. This file  (wires --button-* into Bootstrap's --bs-btn-*)
+//
+// RULE: Only reference --button-* tokens here, not --color-* or primitives.
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Base .btn — geometry shared across all Bootstrap button variants
+// -----------------------------------------------------------------------------
+.btn {
+  --bs-btn-padding-x:      var(--button-padding-x);
+  --bs-btn-padding-y:      var(--button-padding-y);
+  --bs-btn-font-size:      var(--button-font-size);
+  --bs-btn-font-weight:    var(--button-font-weight);
+  --bs-btn-border-radius:  var(--button-border-radius);
+}
+
+// -----------------------------------------------------------------------------
+// .btn-primary — Bootstrap's filled primary button
+// -----------------------------------------------------------------------------
+.btn-primary {
+  --bs-btn-bg:                var(--button-primary-bg);
+  --bs-btn-color:             var(--button-primary-text);
+  --bs-btn-border-color:      var(--button-primary-border);
+
+  --bs-btn-hover-bg:          var(--button-primary-bg-hover);
+  --bs-btn-hover-color:       var(--button-primary-text);
+  --bs-btn-hover-border-color: var(--button-primary-border-hover);
+
+  --bs-btn-active-bg:         var(--button-primary-bg-active);
+  --bs-btn-active-color:      var(--button-primary-text);
+  --bs-btn-active-border-color: var(--button-primary-border-hover);
+
+  --bs-btn-disabled-bg:           var(--button-primary-bg);
+  --bs-btn-disabled-color:        var(--button-primary-text);
+  --bs-btn-disabled-border-color: var(--button-primary-border);
+
+  // Bootstrap uses --bs-btn-focus-shadow-rgb for its box-shadow focus ring.
+  // We disable that and rely on the outline-based focus ring set below.
+  --bs-btn-focus-shadow-rgb:  none;
+
+  &:focus-visible {
+    outline: var(--button-focus-ring-width) solid var(--button-focus-ring-color);
+    outline-offset: var(--button-focus-ring-offset);
+    box-shadow: none;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// .btn-outline-primary — Bootstrap's ghost/outline primary button
+// -----------------------------------------------------------------------------
+.btn-outline-primary {
+  --bs-btn-color:             var(--button-ghost-text);
+  --bs-btn-border-color:      var(--button-ghost-border);
+  --bs-btn-bg:                var(--button-ghost-bg);
+
+  --bs-btn-hover-bg:          var(--button-ghost-bg-hover);
+  --bs-btn-hover-color:       var(--button-ghost-text-hover);
+  --bs-btn-hover-border-color: var(--button-ghost-border-hover);
+
+  --bs-btn-active-bg:         var(--button-ghost-bg-hover);
+  --bs-btn-active-color:      var(--button-ghost-text-hover);
+  --bs-btn-active-border-color: var(--button-ghost-border-hover);
+
+  --bs-btn-disabled-bg:           var(--button-ghost-bg);
+  --bs-btn-disabled-color:        var(--button-ghost-text);
+  --bs-btn-disabled-border-color: var(--button-ghost-border);
+
+  --bs-btn-focus-shadow-rgb:  none;
+
+  &:focus-visible {
+    outline: var(--button-focus-ring-width) solid var(--button-focus-ring-color);
+    outline-offset: var(--button-focus-ring-offset);
+    box-shadow: none;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Size modifiers
+// Bootstrap's .btn-sm / .btn-lg override the same --bs-btn-* vars
+// -----------------------------------------------------------------------------
+.btn-sm {
+  --bs-btn-padding-x:   var(--button-sm-padding-x);
+  --bs-btn-padding-y:   var(--button-sm-padding-y);
+  --bs-btn-font-size:   var(--button-sm-font-size);
+}
+
+.btn-lg {
+  --bs-btn-padding-x:   var(--button-lg-padding-x);
+  --bs-btn-padding-y:   var(--button-lg-padding-y);
+  --bs-btn-font-size:   var(--button-lg-font-size);
+}

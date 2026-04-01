@@ -1,0 +1,11 @@
+/* Client B — teal brand, pill buttons */
+:root {
+  --color-blue-100: #E0F5F1;
+  --color-blue-300: #6ECFC0;
+  --color-blue-500: #0F9B8E;
+  --color-blue-700: #0A7A70;
+  --color-blue-900: #065952;
+
+  --radius-md: 999px;
+  --font-family-base: 'Trebuchet MS', sans-serif;
+}

@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# nx cache
+.nx/cache
+.nx/workspace-data
+
+# Generated CSS outputs
+packages/design-tokens/dist/
+packages/component-libs/*/dist/
+
+.angular/
+.claude/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db

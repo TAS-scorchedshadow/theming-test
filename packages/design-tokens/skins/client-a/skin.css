@@ -1,0 +1,11 @@
+/* Client A — orange brand */
+:root {
+  --color-blue-100: #FAE8E0;
+  --color-blue-300: #F0A882;
+  --color-blue-500: #E85D24;
+  --color-blue-700: #C04A18;
+  --color-blue-900: #8C3210;
+
+  --radius-md: 2px;
+  --font-family-base: 'Georgia', serif;
+}

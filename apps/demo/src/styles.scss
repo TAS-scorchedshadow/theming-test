@@ -1,0 +1,143 @@
+// =============================================================================
+// Demo App — Global Stylesheet
+// =============================================================================
+//
+// All CSS layers are injected before this file via the angular.json styles array:
+//   1. @your-org/design-tokens       → --color-*, --spacing-*, etc.
+//   2. @your-org/angular-button/css  → --button-* component token defaults
+//   3. bootstrap                     → .btn, .btn-primary (declares --bs-btn-*)
+//   4. @your-org/bootstrap-lib/css   → --bs-btn-* ← --button-* (must follow Bootstrap)
+//   5. This file                     → demo page layout only
+// =============================================================================
+
+// ---------------------------------------------------------------------------
+// Demo page layout — not part of any lib
+// ---------------------------------------------------------------------------
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  color: var(--color-text-default);
+  background: var(--color-surface-default);
+  margin: 0;
+  padding: 2rem;
+}
+
+.demo-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.demo-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+  &__text {
+    h1 {
+      font-size: 1.5rem;
+      font-weight: var(--font-weight-bold);
+      margin: 0 0 0.5rem;
+    }
+
+    p {
+      color: var(--color-text-muted);
+      margin: 0;
+      font-size: var(--font-size-md);
+    }
+  }
+}
+
+.demo-skin-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+
+  &__label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-bold);
+    margin-right: 0.25rem;
+  }
+
+  &__option {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    transition: all 150ms ease;
+
+    &:hover {
+      border-color: var(--color-brand-primary);
+      color: var(--color-brand-primary);
+    }
+
+    &.is-active {
+      background: var(--color-brand-primary);
+      border-color: var(--color-brand-primary);
+      color: var(--color-text-on-primary);
+    }
+  }
+}
+
+.demo-section {
+  margin-bottom: 3rem;
+
+  &__label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.25rem;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 0.25rem;
+  }
+
+  &__description {
+    font-size: var(--font-size-md);
+    color: var(--color-text-muted);
+    margin: 0 0 1.25rem;
+  }
+}
+
+.demo-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-default);
+
+  & + & {
+    margin-top: 0.75rem;
+  }
+
+  &__label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    min-width: 60px;
+  }
+}
+
+.demo-divider {
+  border: none;
+  border-top: 1px solid var(--color-border-default);
+  margin: 2.5rem 0;
+}

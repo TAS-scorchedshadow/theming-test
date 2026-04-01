@@ -1,0 +1,19 @@
+{
+  "name": "@your-org/design-tokens",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    "./css": "./dist/css/tokens.css",
+    "./skins/base": "./skins/base/skin.css",
+    "./skins/client-a": "./skins/client-a/skin.css",
+    "./skins/client-b": "./skins/client-b/skin.css"
+  },
+  "scripts": {
+    "build": "style-dictionary build --config adapters/css.config.js",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "skins"
+  ]
+}

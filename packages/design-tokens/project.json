@@ -1,0 +1,22 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "design-tokens",
+  "projectType": "library",
+  "sourceRoot": "packages/design-tokens",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run build",
+        "cwd": "packages/design-tokens"
+      },
+      "inputs": [
+        "{projectRoot}/tokens/**/*.json",
+        "{projectRoot}/adapters/**/*.js"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ]
+    }
+  }
+}

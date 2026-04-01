@@ -1,0 +1,17 @@
+// =============================================================================
+// Bootstrap Lib — public stylesheet entry point
+// =============================================================================
+//
+// Remaps --button-* component tokens onto Bootstrap 5's --bs-btn-* CSS vars
+// so Bootstrap's own .btn-primary / .btn-outline-primary classes are themed
+// by the token system.
+//
+// Required load order in the consuming app:
+//   1. @your-org/design-tokens/css       → --color-*, --spacing-*, etc.
+//   2. @your-org/angular-button/styles   → --button-* component token defaults
+//   3. Bootstrap CSS                     → .btn, .btn-primary, etc.
+//   4. @your-org/bootstrap-lib/styles    → this file (remaps --bs-btn-*)
+//   5. [client]-skin.css                 → deployment overrides
+// =============================================================================
+
+@use 'styles/bootstrap-overrides';

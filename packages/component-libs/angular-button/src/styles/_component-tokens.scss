@@ -1,0 +1,62 @@
+// =============================================================================
+// Component Tokens — Angular Button
+// =============================================================================
+//
+// Defines all --button-* token defaults, pointing to semantic aliases from
+// @your-org/design-tokens. A deployment skin can override any of these on
+// :root without touching component SCSS.
+//
+// Load order (consuming app must respect this):
+//   1. @your-org/design-tokens/css     → --color-*, --spacing-*, etc. on :root
+//   2. @your-org/angular-button/styles → this file (--button-* defaults)
+//   3. [client]-skin.css               → deployment overrides
+// =============================================================================
+
+:root {
+  // ---------------------------------------------------------------------------
+  // Geometry
+  // ---------------------------------------------------------------------------
+  --button-border-radius:           var(--radius-md);
+  --button-padding-y:               var(--spacing-sm);
+  --button-padding-x:               var(--spacing-md);
+  --button-font-size:               var(--font-size-md);
+  --button-font-weight:             var(--font-weight-bold);
+
+  // ---------------------------------------------------------------------------
+  // Primary variant
+  // ---------------------------------------------------------------------------
+  --button-primary-bg:              var(--color-brand-primary);
+  --button-primary-bg-hover:        var(--color-brand-primary-hover);
+  --button-primary-bg-active:       var(--color-brand-primary-hover);
+  --button-primary-text:            var(--color-text-on-primary);
+  --button-primary-border:          var(--color-brand-primary);
+  --button-primary-border-hover:    var(--color-brand-primary-hover);
+
+  // ---------------------------------------------------------------------------
+  // Ghost variant
+  // ---------------------------------------------------------------------------
+  --button-ghost-text:              var(--color-brand-primary);
+  --button-ghost-text-hover:        var(--color-brand-primary-hover);
+  --button-ghost-bg:                transparent;
+  --button-ghost-bg-hover:          var(--color-brand-primary-subtle);
+  --button-ghost-border:            var(--color-brand-primary);
+  --button-ghost-border-hover:      var(--color-brand-primary-hover);
+
+  // ---------------------------------------------------------------------------
+  // Focus ring
+  // ---------------------------------------------------------------------------
+  --button-focus-ring-color:        var(--color-border-focus);
+  --button-focus-ring-width:        2px;
+  --button-focus-ring-offset:       2px;
+
+  // ---------------------------------------------------------------------------
+  // Size modifiers
+  // ---------------------------------------------------------------------------
+  --button-sm-padding-y:            var(--spacing-xs);
+  --button-sm-padding-x:            var(--spacing-sm);
+  --button-sm-font-size:            var(--font-size-sm);
+
+  --button-lg-padding-y:            var(--spacing-md);
+  --button-lg-padding-x:            var(--spacing-lg);
+  --button-lg-font-size:            var(--font-size-lg);
+}

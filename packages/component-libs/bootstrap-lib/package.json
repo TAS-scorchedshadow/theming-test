@@ -1,0 +1,19 @@
+{
+  "name": "@your-org/bootstrap-lib",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "sass src/styles/_bootstrap-overrides.scss dist/bootstrap-overrides.css --no-source-map",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@your-org/design-tokens": "^1.0.0"
+  },
+  "exports": {
+    "./styles": "./src/index.scss",
+    "./css": "./dist/bootstrap-overrides.css"
+  },
+  "files": [
+    "src",
+    "dist"
+  ]
+}

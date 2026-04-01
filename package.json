@@ -1,0 +1,36 @@
+{
+  "name": "style-lib-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "packages/component-libs/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "nx run-many --target=build --all",
+    "build:tokens": "nx run design-tokens:build",
+    "affected:build": "nx affected --target=build",
+    "demo": "npx ng serve demo"
+  },
+  "dependencies": {
+    "@angular/common": "^20.0.0",
+    "@angular/compiler": "^20.0.0",
+    "@angular/core": "^20.0.0",
+    "@angular/platform-browser": "^20.0.0",
+    "bootstrap": "^5.3.0",
+    "rxjs": "^7.8.0",
+    "tslib": "^2.6.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^20.0.0",
+    "@types/node": "^22.0.0",
+    "@angular/cli": "^20.0.0",
+    "@angular/compiler-cli": "^20.0.0",
+    "nx": "^22.6.3",
+    "sass": "^1.90.0",
+    "style-dictionary": "^5.4.0",
+    "typescript": "~5.8.0"
+  }
+}
