@@ -1,9 +1,12 @@
 <div class="demo-page">
-
   <header class="demo-header">
     <div class="demo-header__text">
       <h1>Style Library Demo</h1>
-      <p>Both sections share the same <code>--button-*</code> tokens. Switching skin overrides primitives on <code>:root</code> — both libs update instantly.</p>
+      <p>
+        Both sections share the same <code>--button-*</code> tokens. Switching
+        skin overrides primitives on <code>:root</code> — both libs update
+        instantly.
+      </p>
     </div>
 
     <div class="demo-skin-switcher">
@@ -13,7 +16,9 @@
           class="demo-skin-switcher__option"
           [class.is-active]="skinService.activeSkin().id === skin.id"
           (click)="skinService.apply(skin)"
-        >{{ skin.label }}</button>
+        >
+          {{ skin.label }}
+        </button>
       }
     </div>
   </header>
@@ -23,7 +28,8 @@
     <p class="demo-section__label">bootstrap-lib</p>
     <h2 class="demo-section__title">Bootstrap buttons — token-themed</h2>
     <p class="demo-section__description">
-      Bootstrap's own classes with <code>--bs-btn-*</code> remapped to <code>--button-*</code> tokens.
+      Bootstrap's own classes with <code>--bs-btn-*</code> remapped to
+      <code>--button-*</code> tokens.
     </p>
 
     <div class="demo-row">
@@ -44,14 +50,17 @@
     </div>
   </section>
 
-  <hr class="demo-divider">
+  <hr class="demo-divider" />
 
   <!-- Angular button lib -->
   <section class="demo-section">
     <p class="demo-section__label">angular-button</p>
-    <h2 class="demo-section__title">Angular button component — reimplemented</h2>
+    <h2 class="demo-section__title">
+      Angular button component — reimplemented - fixed height
+    </h2>
     <p class="demo-section__description">
-      Standalone Angular component. No Bootstrap dependency. Same <code>--button-*</code> tokens, independent implementation.
+      Standalone Angular component. No Bootstrap dependency. Same
+      <code>--button-*</code> tokens, independent implementation.
     </p>
 
     <div class="demo-row">
@@ -71,5 +80,4 @@
       <button libButton variant="ghost" disabled>Ghost</button>
     </div>
   </section>
-
 </div>

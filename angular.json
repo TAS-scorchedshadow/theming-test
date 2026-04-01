@@ -2,60 +2,7 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "apps",
-  "projects": {
-    "demo": {
-      "projectType": "application",
-      "root": "apps/demo",
-      "sourceRoot": "apps/demo/src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular/build:application",
-          "options": {
-            "outputPath": "dist/apps/demo",
-            "index": "apps/demo/src/index.html",
-            "browser": "apps/demo/src/main.ts",
-            "polyfills": ["zone.js"],
-            "tsConfig": "apps/demo/tsconfig.app.json",
-            "styles": [
-              "node_modules/@your-org/core/dist/css/tokens.css",
-              "node_modules/@your-org/angular-button/dist/component-tokens.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/@your-org/bootstrap-lib/dist/bootstrap-overrides.css",
-              "apps/demo/src/styles.scss"
-            ],
-            "assets": [
-              {
-                "glob": "*/skin.css",
-                "input": "node_modules/@your-org/core/skins",
-                "output": "assets/skins"
-              }
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "all"
-            },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "serve": {
-          "builder": "@angular/build:dev-server",
-          "configurations": {
-            "production": { "buildTarget": "demo:build:production" },
-            "development": { "buildTarget": "demo:build:development" }
-          },
-          "defaultConfiguration": "development"
-        }
-      }
-    }
-  },
+  "projects": {},
   "cli": {
     "analytics": false
   }
